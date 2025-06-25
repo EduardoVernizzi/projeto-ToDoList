@@ -14,13 +14,16 @@ body {
   justify-content: center;
   background-color: #7a90fa;
   font-family: Arial, sans-serif;
+  min-height: 100vh;
+  padding: 1rem;
 }
 
 .container {
   margin: 3rem auto;
   padding: 2rem;
   height: auto;
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
   background-color: antiquewhite;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -38,17 +41,16 @@ body {
 
 .input-area {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 
 .input-area input {
-  flex: 1;
+  flex: 1 1 200px;
+  min-width: 0;
   padding: 0.5rem;
   border-radius: 8px;
   border: 1px solid #ccc;
-
-  
 }
 
 .btn-adicionar {
@@ -59,6 +61,7 @@ body {
   color: white;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  flex-shrink: 0;
 }
 
 .btn-adicionar:hover {
@@ -80,6 +83,8 @@ body {
   margin-bottom: 0.5rem;
   border-radius: 6px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 .lista-tarefas li.concluida {
@@ -87,8 +92,13 @@ body {
   opacity: 0.6;
 }
 
+.botoes {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
 .botoes button {
-  margin-left: 0.5rem;
   background: none;
   border: none;
   cursor: pointer;
@@ -101,8 +111,9 @@ body {
 }
 
 .texto-tarefa {
-  max-width: 80%;
+  max-width: 100%;
   word-wrap: break-word;
   overflow-wrap: break-word;
   white-space: normal;
+  flex: 1 1 auto;
 }
