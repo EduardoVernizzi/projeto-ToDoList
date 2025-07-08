@@ -67,8 +67,11 @@ body {
   margin-top: 1.5rem;
   list-style: none;
   padding-left: 0;
+  max-height: 250px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 6px;
 }
-
 
 .lista-tarefas li {
   display: flex;
@@ -115,6 +118,16 @@ body {
   overflow-wrap: break-word;
   white-space: normal;
   max-width: 100%;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p{
+ text-align: center;
 }
 
 
